@@ -15,7 +15,7 @@ public class GlobalExceptionHandler {
 
 	@ExceptionHandler(PlayerException.class)
 	public ResponseEntity<String> handlePlayerException(PlayerException ex) {
-		return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(ex.getMessage());
+		return ResponseEntity.status(HttpStatus.NOT_FOUND).body(ex.getMessage());
 	}
 
 	@ExceptionHandler(MethodArgumentNotValidException.class)
